@@ -1,0 +1,68 @@
+.tab-bar {
+  width: 100%;
+  min-height: 120rpx; // 调整高度
+  background-color: #fff;
+  
+  // 考虑ios底部bar
+  padding-bottom: env(safe-area-inset-bottom);
+
+  transform: translateZ(0);
+  transition: all 0.3s ease-in-out;
+
+  .tab-bar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ede3e3;
+    border-radius: 50rpx;
+    margin: 0 40rpx;
+    height: 100rpx; // 调整高度
+    // 3D悬浮效果
+    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2);
+    transform: translateZ(0) scale(0.98);
+    position: relative;
+
+    .island {
+      position: absolute;
+      left: 0;
+      top: 15%;
+      z-index: -1;
+      height: 70%;
+      background: linear-gradient( 270deg, #FFC461 0%, #FF9232 100%);
+      border-radius: 60rpx;
+      transition: left 0.3s;
+    }
+
+
+    .tab-item {
+      flex: 1;
+      font-size: 24rpx;
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .tab-icon {
+        width: 48rpx;  // 调整图片宽度
+        height: 48rpx; // 调整图片高度
+      }
+    
+      .tab-text {
+        font-size: 24rpx;
+        opacity: 0;
+        margin-left: 10rpx;
+        height: 48rpx;
+      }
+    }
+
+
+    .selected {
+      .tab-icon {
+        border-image-slice: 1;
+      }
+      .tab-text {
+        opacity: 1;
+        color: #fff;
+      }
+    }
+  }
+}

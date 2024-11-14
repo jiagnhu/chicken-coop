@@ -1,0 +1,29 @@
+<!--pages/accommodation/accommodation.wxml-->
+<view class="container {{theme}}">
+
+  <!-- 民宿房型展示 -->
+  <view class="room-type-section">
+    <view class="section-title h1">民宿房型</view>
+    <view class="room-grid">
+      <view wx:for="{{rooms}}" wx:key="id" class="room-item" bindtap="viewRoomDetail" data-id="{{item.id}}">
+        <image src="{{item.image}}" class="room-image" mode="aspectFill"></image>
+        <view class="room-info">
+          <text class="room-name h2">{{item.name}}</text>
+          <text class="room-price p">￥{{item.price}}/晚</text>
+          <text class="room-availability p">{{item.availability}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 用户点评 -->
+  <view class="review-section">
+    <text class="section-title h1">用户点评</text>
+    <view wx:for="{{reviews}}" wx:key="id" class="review-item">
+      <text class="review-user p">{{item.user}}</text>
+      <text class="review-comment p">{{item.comment}}</text>
+      <text class="review-rating p">评分: {{item.rating}}/5</text>
+    </view>
+  </view>
+
+</view>

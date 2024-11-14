@@ -1,0 +1,13 @@
+<scroll-view
+    scroll-y
+    bindrefresherpulling="onRefresherPulling"
+    bindrefresherrefresh="onRefresherRefresh"
+    bindscrolltolower="onLoadMore"
+    refresher-enabled="{{true}}"
+    refresher-triggered="{{isRefreshing}}"
+    style="{{height}}{{themeStyles.button.background}};"
+    bindscroll="onScroll"
+    scroll-top="{{scrollTop}}" 
+  >
+  <slot></slot>
+</scroll-view>

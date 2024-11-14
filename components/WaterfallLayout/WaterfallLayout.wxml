@@ -1,0 +1,22 @@
+<!-- WaterfallLayout.wxml -->
+<view class="header_box {{ showSlider && 'bg'}}" catchtouchstart="onTouchStart" catchtouchmove="onTouchmove" catchtouchend="onTouchEnd">
+  <!-- 根据 showSlider 决定是否显示 slider -->
+  <slider wx:if="{{showSlider}}" class="slider" min="1" max="10" step="1" value="{{col}}" show-value bindchange="onSliderChange" block-size="12" catchtouchstart="onSliderTouchStart" catchtouchmove="onSliderTouchMove" />
+  <view wx:else class="progress-bar"  >
+    <!-- 背景条 -->
+    <view class="bar-background"></view>
+    <!-- 动态高亮条，宽度根据 col 值变化 -->
+    <view class="bar-fill" style="width: {{col * 10}}%;"></view>
+  </view>
+</view>
+
+
+<view class="waterfall-container">
+  <block wx:for="{{columns}}" wx:for-item="col" wx:key="index">
+    <view class="column">
+      <block wx:for="{{col}}" wx:key="index">
+        <oval-image src="{{item.src}}" urls="{{urls}}" imageStyle="{{item}}" />
+      </block>
+    </view>
+  </block>
+</view>

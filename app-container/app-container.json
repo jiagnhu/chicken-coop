@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "refresh-scroll-view": "/components/refresh-scroll-view/refresh-scroll-view",
+    "custom-tabbar": "/custom-tabbar/custom-tabbar",
+    "theme-switcher": "/components/theme-switcher/theme-switcher",
+    "home-content": "/pages/index/components/home/home",
+    "logs-content": "/pages/logs/logs",
+    "user-content": "/pages/index/components/more/user/user",
+    "product-content": "/pages/index/components/product/product",
+    "dining-content": "/pages/index/components/dining/dining",
+    "accommodation-content": "/pages/index/components/accommodation/accommodation"
+  }
+}

@@ -1,0 +1,59 @@
+/* pages/accommodation/accommodation.wxss */
+@import '../../../../assets/css/themes.scss';
+.container {
+  padding: 20rpx;
+}
+
+.room-type-section {
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  margin-bottom: 10rpx;
+}
+
+.room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.room-item {
+  width: 48%;
+}
+
+.room-image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.room-info {
+  margin-top: 10rpx;
+}
+
+.room-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.room-price {
+  font-size: 24rpx;
+  color: #e91e63;
+}
+
+.room-availability {
+  font-size: 24rpx;
+  color: #777;
+}
+
+.review-section {
+  margin-top: 30rpx;
+}
+
+.review-item {
+  margin-bottom: 15rpx;
+  padding: 15rpx;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+}

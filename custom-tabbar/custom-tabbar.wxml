@@ -1,0 +1,37 @@
+<view class="tab-bar">
+  <view class="tab-bar-container">
+    <block wx:for="{{tabs}}" wx:key="index">
+      <view
+        class="tab-item {{selected === index ? 'selected' : ''}}"
+        bindtap="switchTab"
+        data-index="{{index}}"
+      >
+        <image class="tab-icon"  src="{{selected === index ? item.iconSelected : item.icon}}" />
+        <!-- <view class="tab-text" >{{item.tabName}}</view> -->
+      </view>
+
+      <!-- 灵动岛 -->
+       <view class="island" 
+       style="width: {{ tabbar.calculateIslandWidth(tabs.length) }}; left: {{ tabbar.calculateIslandPosition(selected, tabs.length) }}; {{themeStyleButton}}">
+       </view>
+    </block>
+  </view>
+</view>
+
+<!-- wsx 将计算灵动岛的函数写这里 -->
+<wxs module="tabbar">
+  // 计算灵动岛的位置
+  function calculateIslandPosition(selected, tabsLength) {
+    return 100 / tabsLength * selected + 1 + '%';
+  }
+
+  // 计算灵动岛宽度
+  function calculateIslandWidth(tabsLength) {
+    return 90 / tabsLength + '%';
+  }
+
+  module.exports = {
+    calculateIslandPosition: calculateIslandPosition,
+    calculateIslandWidth: calculateIslandWidth
+  };
+</wxs>

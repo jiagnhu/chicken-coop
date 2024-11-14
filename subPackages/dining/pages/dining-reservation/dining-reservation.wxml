@@ -1,0 +1,44 @@
+<navigation-bar title="{{title}}" id="navigation-bar" back="{{true}}" color="white"></navigation-bar>
+<view class="container {{theme}}">
+
+  <!-- 菜品展示 -->
+  <view class="dining-section">
+    <text class="section-title h1">餐饮预订</text>
+    <scroll-view scroll-x="true" class="menu-scroll">
+      <view wx:for="{{menu}}" wx:key="id" class="menu-item">
+        <image src="{{item.image}}" class="menu-image" mode="aspectFill"></image>
+        <view class="menu-info">
+          <text class="menu-name h2">{{item.name}}</text>
+          <text class="menu-price p">￥{{item.price}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 房间展示 -->
+  <view class="room-section">
+    <text class="section-title h1">预定房间</text>
+    <view class="room-grid">
+      <view wx:for="{{rooms}}" wx:key="id" class="room-item">
+        <image src="{{item.image}}" class="room-image" mode="aspectFill"></image>
+        <view class="room-info">
+          <text class="room-name h2">{{item.name}}</text>
+          <text class="room-status p">{{item.status}}</text>
+          <button class="room-booking-button button" wx:if="{{item.status === '可预定'}}" bindtap="bookRoom" data-id="{{item.id}}">预订</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 自助烧烤与野炊场地 -->
+  <view class="bbq-section">
+    <text class="section-title h1">自助烧烤/野炊预订</text>
+    <image src="{{bbqMap}}" class="bbq-map" mode="aspectFit" bindtap="selectBBQArea"></image>
+  </view>
+
+  <!-- 预订按钮 -->
+  <view class="booking-button-section">
+    <button class="booking-button button" bindtap="confirmReservation">确认预订</button>
+  </view>
+
+</view>

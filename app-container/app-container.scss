@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto; /* 取消惯性滚动 */
+  background-color: #fff;
+}
+
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+}
+

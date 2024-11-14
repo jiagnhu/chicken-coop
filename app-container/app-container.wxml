@@ -1,0 +1,31 @@
+<view class="container">
+  <navigation-bar title="{{title}}" id="navigation-bar" back="{{false}}" color="white"></navigation-bar>
+  <view class="{{animationClass}}">
+    <refresh-scroll-view height="{{bodyHeight}}" top="{{scrollPositions[currentPage]}}" bind:scroll="handleScroll">
+      <!-- 渲染 home-page -->
+      <view hidden="{{currentPage !== 'home'}}">
+        <home-content wx:if="{{pageCache.home}}" id="home-content" ></home-content>
+      </view>
+      <view hidden="{{currentPage !== 'logs'}}">
+        <logs-content wx:if="{{pageCache.logs}}" id="logs-content" ></logs-content>
+      </view>
+      <view hidden="{{currentPage !== 'user'}}">
+        <user-content wx:if="{{pageCache.user}}" id="user-content" ></user-content>
+      </view>
+      <view hidden="{{currentPage !== 'product'}}">
+        <product-content wx:if="{{pageCache.product}}" id="product-content" ></product-content>
+      </view>
+      <view hidden="{{currentPage !== 'dining'}}">
+        <dining-content wx:if="{{pageCache.dining}}" id="dining-content" ></dining-content>
+      </view>
+      <view hidden="{{currentPage !== 'accommodation'}}">
+        <accommodation-content wx:if="{{pageCache.accommodation}}" id="accommodation-content" ></accommodation-content>
+      </view>
+      <!-- 渲染其他页面时的占位 -->
+      <slot name="content"></slot>
+    </refresh-scroll-view>
+  </view>
+  <theme-switcher></theme-switcher>
+  <!-- 底部的 TabBar -->
+  <custom-tabbar id="tabber-bar" bind:switch="switchPage"></custom-tabbar>
+</view>

@@ -1,0 +1,118 @@
+@import '../../../../assets/css/themes.scss';
+.container {
+  padding: 20rpx;
+}
+
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 20rpx;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+
+.product-info {
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-name {
+  margin-bottom: 10rpx;
+}
+
+.product-price {
+  margin-bottom: 10rpx;
+  color: #e91e63;
+}
+
+.product-stock {
+  margin-bottom: 20rpx;
+  color: #777;
+}
+
+.product-description {
+  margin-bottom: 20rpx;
+  color: #555;
+}
+
+.action-buttons {
+  display: flex;
+  margin: 30rpx 0;
+  width: 80%;
+}
+
+.buy-button {
+  width: 30%;
+  background-color: #ff9800;
+  color: #fff;
+  padding: 15rpx;
+  border-radius: 10rpx;
+}
+
+.favorite-button,
+.share-button {
+  width: 30%;
+  background-color: #fff;
+  color: #ff9800;
+  border: 1px solid #ff9800;
+  padding: 15rpx;
+  border-radius: 10rpx;
+}
+
+.reviews-section {
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  margin-bottom: 20rpx;
+}
+
+.review-summary {
+  margin-bottom: 20rpx;
+}
+
+.review-item {
+  margin-bottom: 15rpx;
+  padding: 15rpx;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+}
+
+.recommended-section {
+  margin-top: 20rpx;
+}
+
+.recommended-list {
+  display: flex;
+  gap: 20rpx;
+  overflow-x: scroll;
+}
+
+.recommended-item {
+  width: 200rpx;
+}
+
+.recommended-image {
+  width: 100%;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.recommended-name {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.recommended-price {
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  color: #e91e63;
+}

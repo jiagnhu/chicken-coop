@@ -1,0 +1,8 @@
+<!--components/oval-image/oval-image.wxml-->
+<view style="{{imageStyle.style}}">
+  <view class="oval-mask" style="{{imageStyle.style}}" bindtap="onImageTap">
+    
+    <image class="oval-image" src="{{src}}" style="{{imageAnimationStyle}}" mode="{{imageStyle.isHorizontal ? 'widthFix':'heightFix'}}" lazy-load></image>
+    <view class="oval-loading" wx:if="{{!loaded}}">加载中</view>
+  </view>
+</view>

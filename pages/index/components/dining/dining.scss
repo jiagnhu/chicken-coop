@@ -1,0 +1,54 @@
+/* pages/dining/dining.wxss */
+@import '../../../../assets/css/themes.scss';
+.container {
+  padding: 20rpx;
+}
+
+.introduction-section {
+  margin-bottom: 20rpx;
+}
+
+.intro-image {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 15rpx;
+}
+
+.intro-description {
+  margin-top: 10rpx;
+  color: #666;
+}
+
+.menu-section {
+  margin-top: 20rpx;
+}
+
+.section-title {
+  margin-bottom: 20rpx;
+}
+
+.menu-item {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.menu-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+
+.menu-info {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.booking-section {
+  margin-top: 30rpx;
+}
+
+.booking-button {
+  width: 100%;
+  padding: 15rpx;
+  margin-bottom: 20rpx;
+}

@@ -1,0 +1,13 @@
+<!--pages/product/product.wxml-->
+<view class="container {{theme}}">
+  <view class="product-list">
+    <view wx:for="{{products}}" wx:key="id" class="product-item" bindtap="showProductDetail" data-id="{{item.id}}">
+      <image src="{{item.image}}" class="product-image" mode="aspectFill"></image>
+      <view class="product-info">
+        <text class="h1">{{item.name}}</text>
+        <text class="p">￥{{item.price}} 库存: {{item.stock}}</text>
+        <button class="button" bindtap="buyProduct" data-id="{{item.id}}">购买</button>
+      </view>
+    </view>
+  </view>
+</view>

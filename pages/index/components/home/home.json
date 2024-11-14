@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "oval-image": "/components/oval-image/oval-image",
+    "WaterfallLayout": "/components/WaterfallLayout/WaterfallLayout"
+  }
+}

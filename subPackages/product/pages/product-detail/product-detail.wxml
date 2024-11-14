@@ -1,0 +1,48 @@
+<navigation-bar title="{{title}}" id="navigation-bar" back="{{true}}" color="white"></navigation-bar>
+<view class="container {{theme}}">
+  <!-- 产品图片 -->
+  <view class="product-image-wrapper">
+    <image src="{{product.image}}" class="product-image" mode="aspectFill"></image>
+  </view>
+
+  <!-- 产品信息 -->
+  <view class="product-info">
+    <text class="product-name h1">{{product.name}}</text>
+    <text class="product-price p">￥{{product.price}}</text>
+    <text class="product-stock p">库存: {{product.stock}}</text>
+    <text class="product-description p">{{product.description}}</text>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <view class="buy-button button" bindtap="buyProduct">立即购买</view>
+    <view class="favorite-button" bindtap="toggleFavorite">收藏</view>
+    <view class="share-button" bindtap="shareProduct">分享</view>
+  </view>
+
+  <!-- 用户评价 -->
+  <view class="reviews-section">
+    <text class="section-title h2">用户评价</text>
+    <view class="review-summary">
+      <text class="average-rating p">平均评分: {{product.averageRating}}/5</text>
+      <text class="total-reviews p">共{{product.totalReviews}}条评价</text>
+    </view>
+    <view wx:for="{{product.reviews}}" wx:key="id" class="review-item">
+      <text class="review-user p">{{item.user}}</text>
+      <text class="review-comment p">{{item.comment}}</text>
+    </view>
+  </view>
+
+  <!-- 推荐产品 -->
+  <view class="recommended-section">
+    <text class="section-title h2">推荐产品</text>
+    <scroll-view scroll-x="true" class="recommended-list">
+      <view wx:for="{{recommendedProducts}}" wx:key="id" class="recommended-item" bindtap="viewProductDetail" data-id="{{item.id}}">
+        <image src="{{item.image}}" class="recommended-image" mode="aspectFill"></image>
+        <text class="recommended-name p">{{item.name}}</text>
+        <text class="recommended-price p">￥{{item.price}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

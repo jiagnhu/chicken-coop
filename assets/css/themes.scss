@@ -1,0 +1,87 @@
+@import 'variables';
+// themes.scss
+/* Light Theme */
+.light {
+  .button {
+    background: linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 100%);
+    color: #2C3E50;
+    font-size: 24rpx;
+  }
+  .h1 {
+    color: #000;
+    font-size: 32rpx;
+  }
+  .h2 {
+    color: #000;
+    font-size: 28rpx;
+  }
+  .p {
+    color: #000;
+    font-size: 24rpx;
+  }
+}
+
+/* Dark Theme */
+.dark {
+  .button {
+    background: linear-gradient(135deg, #1C1C1C 0%, #444444 100%);
+    color: #FAFAFA;
+    font-size: 24rpx;
+  }
+  .h1 {
+    color: #000;
+    font-size: 32rpx;
+  }
+  .h2 {
+    color: #000;
+    font-size: 28rpx;
+  }
+  .p {
+    color: #000;
+    font-size: 24rpx;
+  }
+}
+
+/* Blue Theme */
+.blue {
+  .button {
+    background: linear-gradient(135deg, #0D47A1 0%, #64B5F6 100%);
+    color: #FFFFFF;
+    font-size: 24rpx;
+  }
+  .h1 {
+    color: #000;
+    font-size: 32rpx;
+  }
+  .h2 {
+    color: #000;
+    font-size: 28rpx;
+  }
+  .p {
+    color: #000;
+    font-size: 24rpx;
+  }
+}
+
+/* Orange Theme */
+.orange {
+  .button {
+    background: linear-gradient(270deg, #FFC461 0%, #FF9232 100%);
+    color: #FFFFFF;
+    font-size: 24rpx;
+  }
+  .h1 {
+    color: #000;
+    font-size: 32rpx;
+  }
+  .h2 {
+    color: #000;
+    font-size: 28rpx;
+  }
+  .p {
+    color: #000;
+    font-size: 24rpx;
+  }
+}
+
+/* 可以添加更多主题 */

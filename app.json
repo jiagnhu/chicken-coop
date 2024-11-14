@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "容器",
+        "iconPath": "images/bar/icon_calendar.png",
+        "selectedIconPath": "images/bar/icon_hover_calendar.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "images/bar/icon_person.png",
+        "selectedIconPath": "images/bar/icon_hover_person.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "resolveAlias": {
+    "@/*": "/*"
+  },
+  "subPackages": [
+    {
+      "root": "subPackages/product",
+      "pages": [
+        "pages/product-detail/product-detail"
+      ]
+    },
+    {
+      "root": "subPackages/dining",
+      "pages": [
+        "pages/dining-reservation/dining-reservation"
+      ]
+    }
+  ]
+}

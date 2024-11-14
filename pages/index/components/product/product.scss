@@ -1,0 +1,31 @@
+/* pages/product/product.wxss */
+@import '../../../../assets/css/themes.scss';
+.container {
+  padding: 20rpx;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.product-info {
+  flex: 1;
+  margin-left: 20rpx;
+}

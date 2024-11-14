@@ -1,0 +1,26 @@
+<view class="container {{theme}}">
+  <!-- 农家乐介绍 -->
+  <view class="introduction-section">
+    <image src="{{introduction.image}}" class="intro-image" mode="aspectFill"></image>
+    <text class="intro-description p">{{introduction.description}}</text>
+  </view>
+
+  <!-- 菜单展示 -->
+  <view class="menu-section">
+    <text class="section-title h1">菜单</text>
+    <view wx:for="{{menu}}" wx:key="id" class="menu-item">
+      <image src="{{item.image}}" class="menu-image" mode="aspectFill"></image>
+      <view class="menu-info">
+        <text class="menu-name h2">{{item.name}}</text>
+        <text class="menu-price p">￥{{item.price}}</text>
+        <text class="menu-description p">{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 预订按钮 -->
+  <view class="booking-section">
+    <button class="booking-button button" bindtap="makeReservation">预订餐饮</button>
+    <button class="booking-button button" bindtap="makeBBQReservation">预订自助烧烤/野炊</button>
+  </view>
+</view>

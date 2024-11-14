@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<!-- <navigation-bar title="查看启动日志" back="{{true}}" color="white"></navigation-bar> -->
+<input bindinput="onInput" value="{{text}}" />
+<block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
+  <!-- input输入框 -->
+  <view class="log-item">{{index + 1}}. {{log.date}}</view>
+</block>
+<!-- <custom-tabbar selected="{{1}}"></custom-tabbar> -->

@@ -1,0 +1,100 @@
+/* subPackages/dining/pages/dining-reservation/dining-reservation.wxss */
+@import '../../../../assets/css/themes.scss';
+.container {
+  padding: 20rpx;
+}
+
+.dining-section {
+  margin-bottom: 20rpx;
+}
+
+.menu-scroll {
+  display: flex;
+  gap: 20rpx;
+  overflow-x: scroll;
+}
+
+.menu-item {
+  width: 200rpx;
+}
+
+.menu-image {
+  width: 100%;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.menu-info {
+  margin-top: 10rpx;
+}
+
+.menu-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.menu-price {
+  color: #e91e63;
+}
+
+.room-section {
+  margin-bottom: 20rpx;
+}
+
+.room-grid {
+  display: flex;
+  gap: 20rpx;
+  flex-wrap: wrap;
+}
+
+.room-item {
+  width: 48%;
+}
+
+.room-image {
+  width: 100%;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.room-info {
+  margin-top: 10rpx;
+}
+
+.room-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.room-status {
+  color: #777;
+}
+
+.room-booking-button {
+  margin-top: 10rpx;
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 5rpx;
+  padding: 10rpx;
+}
+
+.bbq-section {
+  margin-bottom: 20rpx;
+}
+
+.bbq-map {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.booking-button-section {
+  text-align: center;
+}
+
+.booking-button {
+  width: 100%;
+  padding: 15rpx;
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 10rpx;
+}
